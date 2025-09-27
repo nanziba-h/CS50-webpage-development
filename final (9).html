@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>AUW registration for adding courses</title>
+
+    <style>
+      a {
+        color: #ff0000;
+        text-decoration: none;
+      }
+
+      body {
+        background-color: #FFF5EE;
+        border: 2px solid red;
+        margin-top: 15px;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+
+      h5 {
+        color: red;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      h4 {
+        text-align: center;
+      }
+
+      table {
+        text-align: center;
+      }
+
+      div {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="logo.png" class="img-fluid" alt="auw logo">
+
+    <h4><a href="https://asian-university.org/wp-content/uploads/2020/08/2020-21-Academic-Bulletin-updated-Aug-20.pdf"><u>Click here to check Academic Bulletin</u></a></h4>
+
+    <h5>Look up keywords to look for a specific course. Click <b>'ADD'</b> button to be added.</h5>
+
+    <div>
+      <!-- search tab and calling the search function -->
+        <b>Search for Course Code:</b><input name="a" type="text" id="input" placeholder="BINF/BIOL/3003/..." onkeyup="search()"/>
+    </div>
+
+         <table class="table" id="mytable">
+            <tr>
+              <th>Subject Code</th>
+              <th>Day/Time</th>
+              <th>ADD</th>
+            </tr>
+            <tr>
+              <td>BINF2000</td>
+              <td>MW15:00-16:40</td>
+              <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+              <td>BIOL/ENVS3003</td>
+              <td>MW15:00-16:40</td>
+              <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>CHEM2001</td>
+                <td>ST15:00-16:40</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>CSCI1103-4</td>
+                <td>MW18:40-20:20</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>DS/PPE3100</td>
+                <td>MW16:50-18:30</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>BIOL3022</td>
+                <td>MW16:50-18:30</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>CSCI1103-4</td>
+                <td>MW18:40-20:20</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>ENVS3009</td>
+                <td>MW9:50-11:30</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+            <tr>
+                <td>MATH3006</td>
+                <td>MW15:00-16:40</td>
+                <td><button><a href="https://nanziiba-code50-108980276-pj5695j57h99p-5500.preview.app.github.dev/final/added.html">ADD</a></button></td>
+            </tr>
+          </table>
+
+  <script>
+
+  //defining function search()
+    function search()
+    {
+      //enabling table to be filtered by user's search
+      let filter = document.getElementById('input').value.toUpperCase();
+
+      //matching user search input with elements in column
+      let mytable = document.getElementById('mytable');
+
+      //matching user input with elements in row, tr is a tag
+      let tr = mytable.getElementsByTagName('tr');
+
+      //loop through all elements by rows
+      for(var i = 0; i < tr.length; i++)
+      {
+        //array of i rows, get elements inside that row and take value of row[i], column[0]
+        let td = tr[i].getElementsByTagName('td')[0];
+
+        //storing row[i]column[0] value
+        if(td)
+        {
+          //access content inside the table column. If value inside table, store in variable
+          let textvalue = td.textContent;
+
+          //checking if user input and table data matches (should give a non-neg numeric value if matches, else -1)
+          if(textvalue.indexOf(filter) > -1)
+          {
+            //css style to display filtered data
+            tr[i].style.display = "";
+          }
+
+          else
+          {
+            //css style to display nothing if values dont match
+            tr[i].style.display = "none";
+          }
+
+        }
+      }
+
+    }
+  </script>
+
+  </body>
+</html>

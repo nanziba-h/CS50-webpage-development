@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <!--container and table-->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Courses for viewing</title>
+    </head>
+
+    <body>
+      <div class="logo">
+        <img src="data:image/png;base64,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" alt="auw logo" width="150" heigh="100" >
+      </div>
+      <h2><b>ASIAN UNIVERSITY FOR WOMEN</b></h2>
+      <hr width="500px;"
+        color="yellow"
+        size="10">
+      <h5>Courses for viewing</h5>
+        <h5>Look up keywords to look for a specific course.</h5>
+
+        <div class="container">
+          <div class="jumbotron">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" style="color: red" aria-current="page" href="index.html"><b>Courses offered</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: red" href="https://asian-university.org/wp-content/uploads/2020/08/2020-21-Academic-Bulletin-updated-Aug-20.pdf"><b>Acedmic Bulletin</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: red" href="major.html"><b>Majors</b></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" style="color: red" href="minor.html"><b>Minors</b></a>
+                </li>
+            </ul>
+
+          </div>
+
+        <div>
+          <!-- search tab and calling the search function -->
+            <b>Search for Course Code:</b><input name="a" type="text" id="input" placeholder="BINF/BIOL/3003/..." onkeyup="search()"/>
+        </div>
+
+             <table class="table" id="mytable">
+                <tr>
+                  <th>Course Code</th>
+                  <th>Day/Time</th>
+                  <th>Instructor</th>
+                </tr>
+                <tr>
+                  <td><b>BINF3005:</b> Biotechnology/Genetic Engineering</td>
+                  <td>MW15:00-16:40</td>
+                  <td><button><a href="Ayan.html">Dr Ayan Saha</a></button></td>
+                </tr>
+                <tr>
+                  <td><b>ENVS3003:</b> Geology</td>
+                  <td>MW15:00-16:40</td>
+                  <td><button><a href="mukesh.html">Dr Mukesh Kumar Gupta</a></button></td>
+                </tr>
+                <tr>
+                    <td><b>CHEM2001:</b> Organic Chemistry 1</td>
+                    <td>ST15:00-16:40</td>
+                    <td><button><a href="mosae.html">Dr P Mosae Selvakumar</a></button></td>
+                </tr>
+                <tr>
+                    <td><b>CSCI1103-4:</b> Introduction to Computing and Programming</td>
+                    <td>MW18:40-20:20</td>
+                    <td><button><a href="nahar.html">Dr Lutfun Nahar</a></button></td>
+                </tr>
+                <tr>
+                    <td><b>DS/PPE3100:</b> Education, Social Justice and International Development (WI)</td>
+                    <td>MW16:50-18:30</td>
+                    <td><button><a href="wang.html">Dr Xingkui Wang</a></button></td>
+                </tr>
+                <tr>
+                    <td><b>BIOL3022:</b> Biochemistry (with lab)</td>
+                    <td>MW16:50-18:30</td>
+                    <td><button><a href="nabila.html">Dr Nazmul Alam</a></button></td>
+                </tr>
+                <tr>
+                    <td><b>ENVS3009:</b> Environmental Health</td>
+                    <td>MW9:50-11:30</td>
+                    <td><button><a href="mukesh.html">Dr Muskesh Kumar Gupta</a></button></td>
+                </tr>
+                <tr>
+                    <td><b>MATH3006:</b> Operations Research</td>
+                    <td>MW15:00-16:40</td>
+                    <td><button><a href="shams.html">Dr Shams Forruque Ahmed</a></button></td>
+                </tr>
+              </table>
+
+              <div class="container">
+                <div class="jumbotron">
+                    <h3>Curriculum</h3>
+                    <p>The Undergraduate Program is grounded in the AUW Core General Education Requirement which is common to all students and is designed to introduce them to advanced study in Social Analysis, Ethical Reasoning, Literature, Civilization Studies and the Arts, Natural Sciences, Computer Science, Mathematics, Writing, and topics specifically focused on Regional Challenges in Asia and Women Shaping Society.</p>
+                    <p>By the end of their first Undergraduate Year, all students begin coursework toward their Bachelor’s degree(s) in one or more major areas of study</p>
+                    <p><b>email at academic.registry@auw.edu.bd for queries</b></p>
+                </div>
+              </div>
+      <script>
+
+      //defining function search()
+        function search()
+        {
+          //storing user's input value in filter by user's search
+          let filter = document.getElementById('input').value.toUpperCase();
+
+          //access elements from table in mytable
+          let mytable = document.getElementById('mytable');
+
+          //stroing row values from the table in tr
+          let tr = mytable.getElementsByTagName('tr');
+
+          //loop through all elements by rows
+          for(let i = 0; i < tr.length; i++)
+          {
+            //array of i rows, get elements inside that row and take value of row[i], column[0]
+            let td = tr[i].getElementsByTagName('td')[0];
+
+            if(td)
+            {
+              //access content inside the table column. If value inside table, store in variable
+              let textvalue = td.textContent;
+
+              //checking if user input and table data matches (should give a non-neg numeric value if matches, else -1)
+              if(textvalue.indexOf(filter) > -1)
+              {
+                //css style to display filtered data of current row
+                tr[i].style.display = "";
+              }
+
+              else
+              {
+                //css style to display nothing if values dont match
+                tr[i].style.display = "none";
+              }
+
+            }
+          }
+
+        }
+      </script>
+
+      </body>
+</html>
